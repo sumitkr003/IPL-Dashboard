@@ -89,7 +89,7 @@ const Team = () => {
           <Grid item xs={3}>
             <Card className={moreMatches}>
               <div className={button}>
-                <a href="/" className={link}> More {'>'} </a>
+                <a href={`/team/${teamName}/matches/2020`} className={link}> More {'>'} </a>
               </div>
             </Card>
           </Grid>
