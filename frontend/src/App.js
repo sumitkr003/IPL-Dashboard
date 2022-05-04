@@ -1,10 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import HomePage from './pages/HomePage';
+import "./App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Team from "./pages/Team";
 
 function App() {
   return (
-    <HomePage />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/team/:teamName" element={<Team />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
