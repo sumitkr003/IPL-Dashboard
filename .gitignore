@@ -33,4 +33,17 @@ build/
 .vscode/
 
 ### React App ###
-src/frontend/node_modules/
+frontend/node_modules/
+frontend/build
+frontend/package-lock.json
+
+# misc
+frontend/.DS_Store
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
