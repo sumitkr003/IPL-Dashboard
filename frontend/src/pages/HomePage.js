@@ -47,11 +47,11 @@ const HomePage = () => {
         <Typography gutterBottom variant="h3" align="center">
           IPL Dashboard
         </Typography>
-        <Grid container spacing={6}>
+        <Grid container spacing={2}>
           {teams.map(({ teamName }, index) => (
             <Grid item xs={4} key={index}>
               <Card className={item} raised={true}>
-                <Typography align="center" variant="h5" style={{ marginTop : "150px"}}>
+                <Typography align="center" variant="h5" fontWeight={600} style={{ marginTop : "150px"}}>
                   {teamName}
                 </Typography>
               </Card>
