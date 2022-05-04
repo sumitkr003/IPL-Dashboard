@@ -19,11 +19,15 @@ const useStyles = makeStyles({
     float: 'right',
     marginRight: '8px'
   },
+  link : {
+    color: 'white',
+    textDecoration: "none",
+  }
 });
 
 const LastMatch = ({ teamName, team1, team2, date, venue, matchWinner, resultMargin, result, playerOfMatch, umpire1, umpire2 }) => {
   const color = matchWinner === teamName ? "#4DA375" : "#A34D5D";
-  const { item, left, right } = useStyles();
+  const { item, left, right, link } = useStyles();
   return (
     <Grid item xs={12}>
       <Card className={item} raised={false} style={{ backgroundColor: color }}>
@@ -32,7 +36,7 @@ const LastMatch = ({ teamName, team1, team2, date, venue, matchWinner, resultMar
             vs
           </Typography>
           <Typography gutterBottom variant="h4" fontWeight={"bold"}>
-            {teamName !== team1 ? team1 : team2}
+            <a className={link} href={`/team/${teamName !== team1 ? team1 : team2}`}> {teamName !== team1 ? team1 : team2} </a>
           </Typography>
           <Typography gutterBottom variant="h5" fontWeight={"bold"}>
             {date}
