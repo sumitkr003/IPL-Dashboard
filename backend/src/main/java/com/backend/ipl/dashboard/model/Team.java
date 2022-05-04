@@ -1,9 +1,6 @@
 package com.backend.ipl.dashboard.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -16,7 +13,10 @@ public class Team {
     private String teamName;
     private long totalMatches;
     private long totalWins;
+    @Transient
+    private List<Match> latestMatches;
 
+    public Team(){}
 
     public long getId() {
         return id;
@@ -49,6 +49,14 @@ public class Team {
     @Override
     public String toString() {
         return "Team [teamName=" + teamName + ", totalMatches=" + totalMatches + ", totalWins=" + totalWins + "]";
+    }
+
+    public List<Match> getLatestMatches() {
+        return latestMatches;
+    }
+
+    public void setLatestMatches(List<Match> latestMatches) {
+        this.latestMatches = latestMatches;
     }
 }
 
